@@ -25,7 +25,7 @@ import (
 // based on a 521-bit ECDSA private key.  The machine's local interface
 // addresses and all variants of IPv4 and IPv6 localhost are included as
 // valid IP addresses.
-// If the override flag is set tru only the extraHosts are used.
+// If the override flag is set true only the extraHosts are used.
 func NewTLSCertPair(organization string, validUntil time.Time, override bool, extraHosts []string) (cert, key []byte, err error) {
 	now := time.Now()
 	if validUntil.Before(now) {
